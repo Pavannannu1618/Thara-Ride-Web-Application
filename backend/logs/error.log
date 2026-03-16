@@ -1,0 +1,844 @@
+2026-03-11 00:17:53 [error]: Error: The phone number is unverified. Trial accounts cannot send messages to unverified numbers; verify it at twilio.com/user/account/phone-numbers/verified
+    at success (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\twilio\lib\base\Version.js:79:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:40:5)
+    at async sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:10:5)
+2026-03-11 00:17:59 [error]: Error: The phone number is unverified. Trial accounts cannot send messages to unverified numbers; verify it at twilio.com/user/account/phone-numbers/verified
+    at success (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\twilio\lib\base\Version.js:79:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:40:5)
+    at async sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:10:5)
+2026-03-11 00:18:04 [error]: Error: The phone number is unverified. Trial accounts cannot send messages to unverified numbers; verify it at twilio.com/user/account/phone-numbers/verified
+    at success (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\twilio\lib\base\Version.js:79:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:40:5)
+    at async sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:10:5)
+2026-03-11 00:18:08 [error]: Error: The phone number is unverified. Trial accounts cannot send messages to unverified numbers; verify it at twilio.com/user/account/phone-numbers/verified
+    at success (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\twilio\lib\base\Version.js:79:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:40:5)
+    at async sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:10:5)
+2026-03-11 00:18:41 [error]: ValidationError: Wallet validation failed: owner: Path `owner` is required.
+    at Document.invalidate (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\mongoose\lib\document.js:3381:32)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\mongoose\lib\document.js:3142:17
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\mongoose\lib\schemaType.js:1446:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+2026-03-11 00:18:54 [error]: Error: The requested resource /v2/Services/VA5a68f0991b2bdf253d8304ccd997fb29/VerificationCheck was not found
+    at success (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\twilio\lib\base\Version.js:79:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.verifyOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:76:19)
+    at async verifyOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:20:5)
+2026-03-11 00:19:08 [error]: Error: The requested resource /v2/Services/VA5a68f0991b2bdf253d8304ccd997fb29/VerificationCheck was not found
+    at success (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\twilio\lib\base\Version.js:79:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.verifyOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:76:19)
+    at async verifyOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:20:5)
+2026-03-11 00:23:33 [error]: ValidationError: Wallet validation failed: owner: Path `owner` is required.
+    at Document.invalidate (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\mongoose\lib\document.js:3381:32)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\mongoose\lib\document.js:3142:17
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\mongoose\lib\schemaType.js:1446:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+2026-03-11 00:51:16 [error]: Error: The phone number is unverified. Trial accounts cannot send messages to unverified numbers; verify it at twilio.com/user/account/phone-numbers/verified
+    at success (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\twilio\lib\base\Version.js:79:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:40:5)
+    at async sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:10:5)
+2026-03-11 09:20:04 [error]: Error: The phone number is unverified. Trial accounts cannot send messages to unverified numbers; verify it at twilio.com/user/account/phone-numbers/verified
+    at success (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\twilio\lib\base\Version.js:79:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:40:5)
+    at async sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:10:5)
+2026-03-11 09:25:29 [error]: Error: Invalid or expired OTP
+    at Object.verifyOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:81:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async verifyOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:20:5)
+2026-03-11 11:47:56 [error]: Error: The phone number is unverified. Trial accounts cannot send messages to unverified numbers; verify it at twilio.com/user/account/phone-numbers/verified
+    at success (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\twilio\lib\base\Version.js:79:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:40:5)
+    at async sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:10:5)
+2026-03-11 12:28:08 [error]: Error: Refresh token mismatch
+    at Object.refreshAccessToken (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:141:49)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async refreshToken (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:48:29)
+2026-03-11 12:28:08 [error]: Error: Refresh token mismatch
+    at Object.refreshAccessToken (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:141:49)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async refreshToken (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:48:29)
+2026-03-11 12:28:08 [error]: Error: Refresh token mismatch
+    at Object.refreshAccessToken (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:141:49)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async refreshToken (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:48:29)
+2026-03-11 12:28:32 [error]: Error: Refresh token mismatch
+    at Object.refreshAccessToken (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:141:49)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async refreshToken (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:48:29)
+2026-03-11 12:28:32 [error]: Error: Refresh token mismatch
+    at Object.refreshAccessToken (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:141:49)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async refreshToken (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:48:29)
+2026-03-11 12:28:32 [error]: Error: Refresh token mismatch
+    at Object.refreshAccessToken (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:141:49)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async refreshToken (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:48:29)
+2026-03-11 13:49:28 [error]: Error: Refresh token mismatch
+    at Object.refreshAccessToken (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:141:49)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async refreshToken (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:48:29)
+2026-03-11 13:53:43 [error]: TypeError: redis.setex is not a function
+    at C:\Users\Admin\Desktop\thara-ride\backend\src\routes\v1\admin.routes.js:32:17
+2026-03-11 13:54:04 [error]: TypeError: redis.setex is not a function
+    at C:\Users\Admin\Desktop\thara-ride\backend\src\routes\v1\admin.routes.js:32:17
+2026-03-11 13:54:46 [error]: TypeError: redis.setex is not a function
+    at C:\Users\Admin\Desktop\thara-ride\backend\src\routes\v1\admin.routes.js:32:17
+2026-03-11 13:54:58 [error]: TypeError: redis.setex is not a function
+    at C:\Users\Admin\Desktop\thara-ride\backend\src\routes\v1\admin.routes.js:32:17
+2026-03-11 13:55:02 [error]: TypeError: redis.setex is not a function
+    at C:\Users\Admin\Desktop\thara-ride\backend\src\routes\v1\admin.routes.js:32:17
+2026-03-11 13:58:55 [error]: Error: Refresh token mismatch
+    at Object.refreshAccessToken (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:141:49)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async refreshToken (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:48:29)
+2026-03-11 13:58:55 [error]: Error: Refresh token mismatch
+    at Object.refreshAccessToken (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:141:49)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async refreshToken (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:48:29)
+2026-03-11 13:58:55 [error]: Error: Refresh token mismatch
+    at Object.refreshAccessToken (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:141:49)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async refreshToken (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:48:29)
+2026-03-11 13:59:09 [error]: Error: Refresh token mismatch
+    at Object.refreshAccessToken (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:141:49)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async refreshToken (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:48:29)
+2026-03-11 13:59:09 [error]: Error: Refresh token mismatch
+    at Object.refreshAccessToken (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:141:49)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async refreshToken (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:48:29)
+2026-03-11 13:59:09 [error]: Error: Refresh token mismatch
+    at Object.refreshAccessToken (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:141:49)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async refreshToken (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:48:29)
+2026-03-11 14:09:08 [error]: Error: Refresh token mismatch
+    at Object.refreshAccessToken (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:141:49)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async refreshToken (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:48:29)
+2026-03-11 14:09:08 [error]: Error: Refresh token mismatch
+    at Object.refreshAccessToken (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:141:49)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async refreshToken (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:48:29)
+2026-03-11 14:09:08 [error]: Error: Refresh token mismatch
+    at Object.refreshAccessToken (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:141:49)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async refreshToken (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:48:29)
+2026-03-11 14:27:32 [error]: TypeError: redis.setex is not a function
+    at C:\Users\Admin\Desktop\thara-ride\backend\src\routes\v1\admin.routes.js:48:17
+2026-03-11 14:31:08 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:31:08 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:31:08 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:31:09 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:31:09 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:31:32 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:31:33 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:31:34 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:31:35 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:31:38 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:31:38 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:31:39 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:31:39 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:31:39 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:31:40 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:31:40 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:31:41 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:31:41 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:31:42 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:31:43 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:31:44 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:31:44 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:31:45 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:31:47 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:31:48 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:31:49 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:31:50 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:31:59 [error]: Error: Not Found: /api/v1/admin/login
+    at notFound (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\error.middleware.js:4:17)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:646:15
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:32:00 [error]: Error: Not Found: /favicon.ico
+    at notFound (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\error.middleware.js:4:17)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at logger (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\morgan\index.js:144:5)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:286:9
+2026-03-11 14:32:10 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:32:10 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:32:11 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:32:11 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:32:14 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:32:15 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:32:18 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:32:19 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:32:54 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:32:55 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:33:02 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:33:03 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:33:03 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:33:04 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:33:05 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:33:06 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:33:17 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:33:17 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:33:17 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:33:17 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:33:18 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:33:18 [error]: TypeError: redis.get is not a function
+    at protect (C:\Users\Admin\Desktop\thara-ride\backend\src\middlewares\auth.middleware.js:15:37)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\index.js:47:12)
+2026-03-11 14:35:30 [error]: TypeError: connectRedis is not a function
+    at startServer (C:\Users\Admin\Desktop\thara-ride\backend\server.js:18:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-03-11 14:50:13 [error]: TypeError: connectRedis is not a function
+    at startServer (C:\Users\Admin\Desktop\thara-ride\backend\server.js:18:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-03-11 14:50:27 [error]: TypeError: connectRedis is not a function
+    at startServer (C:\Users\Admin\Desktop\thara-ride\backend\server.js:18:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-03-11 14:51:07 [error]: TypeError: connectRedis is not a function
+    at startServer (C:\Users\Admin\Desktop\thara-ride\backend\server.js:18:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-03-11 14:51:48 [error]: TypeError: connectRedis is not a function
+    at startServer (C:\Users\Admin\Desktop\thara-ride\backend\server.js:18:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-03-11 18:20:36 [error]: TypeError: sendOTP is not a function
+    at sendPhoneOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:32:10)
+    at exports.sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:18:11)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express-rate-limit\dist\index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express-rate-limit\dist\index.cjs:691:5
+2026-03-11 18:20:39 [error]: TypeError: sendOTP is not a function
+    at sendPhoneOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:32:10)
+    at exports.sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:18:11)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express-rate-limit\dist\index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express-rate-limit\dist\index.cjs:691:5
+2026-03-11 18:20:41 [error]: TypeError: sendOTP is not a function
+    at sendPhoneOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:32:10)
+    at exports.sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:18:11)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express-rate-limit\dist\index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express-rate-limit\dist\index.cjs:691:5
+2026-03-11 19:59:07 [error]: TypeError: sendOTP is not a function
+    at sendPhoneOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:32:10)
+    at exports.sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:18:11)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express-rate-limit\dist\index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express-rate-limit\dist\index.cjs:691:5
+2026-03-11 19:59:10 [error]: TypeError: sendOTP is not a function
+    at sendPhoneOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:32:10)
+    at exports.sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:18:11)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express-rate-limit\dist\index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express-rate-limit\dist\index.cjs:691:5
+2026-03-11 19:59:32 [error]: TypeError: sendOTP is not a function
+    at sendPhoneOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:32:10)
+    at exports.sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:18:11)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express-rate-limit\dist\index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express-rate-limit\dist\index.cjs:691:5
+2026-03-11 20:03:26 [error]: TypeError: fns[i] is not a function
+    at run (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\socket.io\dist\namespace.js:133:19)
+    at Namespace.run (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\socket.io\dist\namespace.js:144:9)
+    at Namespace._add (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\socket.io\dist\namespace.js:221:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-03-11 22:50:58 [error]: Error: OTP not approved
+    at verifyOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\services\notification.service.js:85:45)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.verifyOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:30:5)
+2026-03-11 22:51:08 [error]: TypeError: fns[i] is not a function
+    at run (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\socket.io\dist\namespace.js:133:19)
+    at Namespace.run (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\socket.io\dist\namespace.js:144:9)
+    at Namespace._add (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\socket.io\dist\namespace.js:221:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-03-11 23:08:23 [error]: TypeError: fns[i] is not a function
+    at run (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\socket.io\dist\namespace.js:133:19)
+    at Namespace.run (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\socket.io\dist\namespace.js:144:9)
+    at Namespace._add (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\socket.io\dist\namespace.js:221:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-03-11 23:13:45 [error]: TypeError: fns[i] is not a function
+    at run (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\socket.io\dist\namespace.js:133:19)
+    at Namespace.run (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\socket.io\dist\namespace.js:144:9)
+    at Namespace._add (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\socket.io\dist\namespace.js:221:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-03-11 23:23:06 [error]: Socket Redis adapter failed: Redis is already connecting/connected
+2026-03-11 23:23:40 [error]: Socket Redis adapter failed: Redis is already connecting/connected
+2026-03-11 23:23:55 [error]: Socket Redis adapter failed: Redis is already connecting/connected
+2026-03-11 23:24:08 [error]: Socket Redis adapter failed: Redis is already connecting/connected
+2026-03-11 23:29:23 [error]: Socket Redis adapter failed: Redis is already connecting/connected
+2026-03-11 23:30:28 [error]: Socket Redis adapter failed: Redis is already connecting/connected
+2026-03-12 16:54:36 [error]: Error: OTP not approved
+    at verifyOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\services\notification.service.js:85:45)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.verifyOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:30:5)
+2026-03-12 19:16:17 [error]: Error: Invalid parameter `To`: 9553995819
+    at success (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\twilio\lib\base\Version.js:79:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\services\notification.service.js:66:5)
+    at async exports.sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:37:5)
+2026-03-12 19:16:25 [error]: Error: Invalid parameter `To`: 9553995819
+    at success (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\twilio\lib\base\Version.js:79:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\services\notification.service.js:66:5)
+    at async exports.sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:37:5)
+2026-03-12 19:17:13 [error]: Error: Invalid parameter `To`: 9553995819
+    at success (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\twilio\lib\base\Version.js:79:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\services\notification.service.js:66:5)
+    at async exports.sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:37:5)
+2026-03-12 19:17:28 [error]: Error: Invalid parameter `To`: 9553995819
+    at success (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\twilio\lib\base\Version.js:79:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\services\notification.service.js:66:5)
+    at async exports.sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:37:5)
+2026-03-12 19:24:48 [error]: ReferenceError: logger is not defined
+    at sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\services\notification.service.js:74:5)
+    at sendPhoneOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:81:10)
+    at exports.sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:37:11)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express-rate-limit\dist\index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express-rate-limit\dist\index.cjs:691:5
+2026-03-12 19:24:49 [error]: ReferenceError: logger is not defined
+    at sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\services\notification.service.js:74:5)
+    at sendPhoneOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:81:10)
+    at exports.sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:37:11)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express-rate-limit\dist\index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express-rate-limit\dist\index.cjs:691:5
+2026-03-12 19:24:51 [error]: ReferenceError: logger is not defined
+    at sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\services\notification.service.js:74:5)
+    at sendPhoneOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\services\auth.service.js:81:10)
+    at exports.sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:37:11)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express\lib\router\route.js:149:13)
+    at C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express-rate-limit\dist\index.cjs:807:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\Admin\Desktop\thara-ride\backend\node_modules\express-rate-limit\dist\index.cjs:691:5
+2026-03-13 11:08:44 [error]: Error: Failed to send OTP. Please try again.
+    at sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\services\notification.service.js:86:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:37:5)

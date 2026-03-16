@@ -1,0 +1,20 @@
+2026-03-11 20:03:26 [error]: TypeError: fns[i] is not a function
+    at run (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\socket.io\dist\namespace.js:133:19)
+    at Namespace.run (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\socket.io\dist\namespace.js:144:9)
+    at Namespace._add (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\socket.io\dist\namespace.js:221:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-03-11 22:51:08 [error]: TypeError: fns[i] is not a function
+    at run (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\socket.io\dist\namespace.js:133:19)
+    at Namespace.run (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\socket.io\dist\namespace.js:144:9)
+    at Namespace._add (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\socket.io\dist\namespace.js:221:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-03-11 23:08:23 [error]: TypeError: fns[i] is not a function
+    at run (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\socket.io\dist\namespace.js:133:19)
+    at Namespace.run (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\socket.io\dist\namespace.js:144:9)
+    at Namespace._add (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\socket.io\dist\namespace.js:221:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-03-11 23:13:45 [error]: TypeError: fns[i] is not a function
+    at run (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\socket.io\dist\namespace.js:133:19)
+    at Namespace.run (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\socket.io\dist\namespace.js:144:9)
+    at Namespace._add (C:\Users\Admin\Desktop\thara-ride\backend\node_modules\socket.io\dist\namespace.js:221:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
