@@ -842,3 +842,4 @@
     at sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\services\notification.service.js:86:7)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
     at async exports.sendOTP (C:\Users\Admin\Desktop\thara-ride\backend\src\controllers\auth.controller.js:37:5)
+2026-03-20 12:06:19 [error]: Failed to start server: querySrv ECONNREFUSED _mongodb._tcp.thararide-cluster.l8seook.mongodb.net
