@@ -1,0 +1,15 @@
+# Environment secrets — NEVER commit
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+
+# Dependencies
+node_modules/
+
+# Misc
+payload.json
+dist/

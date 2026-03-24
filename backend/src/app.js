@@ -19,6 +19,9 @@ const logger = require('./utils/logger');
 
 const app = express();
 
+app.get('/', (req, res) => {
+  res.json({ success: true, message: '🚀 Thara Ride API is running' });
+});
 // ── Security Middleware ──
 app.use(helmet({ contentSecurityPolicy: true }));
 app.use(cors({

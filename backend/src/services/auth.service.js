@@ -3,6 +3,7 @@ const crypto = require('crypto');
 const redis  = require('../config/redis');
 const User   = require('../models/User');
 const Admin  = require('../models/Admin');
+const logger = require('../utils/logger');
 
 // ─────────────────────────────────────────────────────────────────────────────
 // CONSTANTS
@@ -68,16 +69,38 @@ const createWallet = async (userId) => {
 // SEND OTP
 // ─────────────────────────────────────────────────────────────────────────────
 const sendPhoneOTP = async (phone) => {
-  // Dev mode — no Twilio Verify SID configured
-  if (!process.env.TWILIO_VERIFY_SERVICE_SID) {
+  // Dev mode — Twilio configuration is incomplete.
+  const twilioConfigured =
+    process.env.TWILIO_VERIFY_SERVICE_SID &&
+    process.env.TWILIO_ACCOUNT_SID &&
+    process.env.TWILIO_AUTH_TOKEN;
+
+  if (!twilioConfigured) {
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
     await redis.setex(`otp:${phone}`, TTL_OTP, otp);
-    console.log('\n📱 DEV OTP for', phone, '→', otp, '\n');
+    logger.info(`📱 DEV OTP for ${phone} → ${otp}`);
     return { success: true, dev: true };
   }
+
   // Production — delegate to Twilio Verify
   const { sendOTP } = require('./notification.service');
-  return sendOTP(phone);
+  try {
+    return await sendOTP(phone);
+  } catch (err) {
+    // In development, allow recovering by using local OTP fallback (redis) so users can continue
+    if (process.env.NODE_ENV !== 'production') {
+      const otp = Math.floor(100000 + Math.random() * 900000).toString();
+      try {
+        await redis.setex(`otp:${phone}`, TTL_OTP, otp);
+      } catch (e) {
+        logger.warn(`[Auth] Redis fallback OTP save failed: ${e.message}`);
+      }
+      logger.warn(`[Auth] Twilio sendOTP failed, using dev fallback: ${err.message}`);
+      logger.info(`📱 DEV OTP (fallback) for ${phone} → ${otp}`);
+      return { success: true, dev: true, fallback: true };
+    }
+    throw err;
+  }
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
