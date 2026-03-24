@@ -25,16 +25,12 @@ let ioInstance = null;
 
 const initSocket = (server) => {
   const io = new Server(server, {
-    cors: {
-      origin:      (process.env.CLIENT_URLS || 'http://localhost:3000').split(','),
-      methods:     ['GET', 'POST'],
-      credentials: true,
-    },
-    transports:     ['websocket', 'polling'],
-    pingTimeout:    60000,
-    pingInterval:   25000,
-  });
-
+  cors: {
+    origin: process.env.CLIENT_URLS?.split(',') || [],
+    credentials: true,
+  },
+  transports: ['websocket', 'polling'],
+});
   // ── Redis adapter ──
   // ioredis connects automatically — just duplicate the existing client
   try {
