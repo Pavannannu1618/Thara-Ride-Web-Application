@@ -26,12 +26,23 @@ app.get('/', (req, res) => {
 app.use(helmet({ contentSecurityPolicy: true }));
 app.use(cors({
   origin: (origin, callback) => {
-    const allowed = process.env.CLIENT_URLS?.split(',') || [];
-    console.log('CORS Check - Origin:', origin, 'Allowed:', allowed);
+    const clientUrls = process.env.CLIENT_URLS || '';
+    const allowed = clientUrls
+      .split(',')
+      .map(url => url.trim())
+      .filter(url => url.length > 0);
+    
+    console.log('📋 CORS Configuration:', { 
+      clientUrls: process.env.CLIENT_URLS, 
+      processedAllowed: allowed,
+      incomingOrigin: origin 
+    });
+    
     if (!origin || allowed.includes(origin)) {
+      console.log('✅ CORS Allowed for origin:', origin);
       callback(null, true);
     } else {
-      console.log('CORS Blocked - Origin not allowed');
+      console.log('❌ CORS Blocked for origin:', origin, 'Allowed:', allowed);
       callback(new Error('Not allowed by CORS'));
     }
   },
