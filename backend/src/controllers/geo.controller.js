@@ -41,45 +41,18 @@ exports.search = async (req, res, next) => {
 
     const data = await googleMapsFetch(url);
 
-    if (data.status !== 'OK' && data.status !== 'ZERO_RESULTS') {
+    if (data.status === 'ZERO_RESULTS') {
+      return res.json([]);
+    }
+
+    if (data.status !== 'OK') {
       console.error('Google Maps API Error:', {
         status: data.status,
         error_message: data.error_message,
         url: url,
         apiKey: apiKey ? 'SET' : 'NOT SET'
       });
-      
-      // Temporary fallback: return mock data for testing
-      console.log('Returning mock data for testing...');
-      const mockResults = [
-        {
-          place_id: 'mock_1',
-          display_name: 'Lotus Temple, New Delhi',
-          lat: 28.5535,
-          lon: 77.2588,
-          address: { city: 'New Delhi', state: 'Delhi', country: 'India' },
-          type: 'place',
-          importance: 0.8
-        },
-        {
-          place_id: 'mock_2', 
-          display_name: 'Lotus Pond, Hyderabad',
-          lat: 17.3850,
-          lon: 78.4867,
-          address: { city: 'Hyderabad', state: 'Telangana', country: 'India' },
-          type: 'place',
-          importance: 0.7
-        }
-      ].filter(result => {
-        // Filter by distance if coordinates provided
-        if (lat && lng) {
-          const distance = Math.sqrt(Math.pow(result.lat - lat, 2) + Math.pow(result.lon - lng, 2)) * 111; // rough km conversion
-          return distance <= 100; // within 100km
-        }
-        return true;
-      });
-      
-      return res.json(mockResults);
+      return res.json([]);
     }
 
     // Transform Google Places response to match Nominatim format for frontend compatibility
@@ -129,8 +102,13 @@ exports.reverse = async (req, res, next) => {
 
     const data = await googleMapsFetch(url);
 
+    if (data.status === 'ZERO_RESULTS') {
+      return res.json(null);
+    }
+
     if (data.status !== 'OK') {
-      return res.status(400).json({ error: `Google Maps API error: ${data.status}` });
+      console.error('Google Maps Geocode API Error:', data);
+      return res.json(null);
     }
 
     // Transform Google Geocoding response to match Nominatim format
