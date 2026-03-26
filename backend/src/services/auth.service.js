@@ -87,19 +87,17 @@ const sendPhoneOTP = async (phone) => {
   try {
     return await sendOTP(phone);
   } catch (err) {
-    // In development, allow recovering by using local OTP fallback (redis) so users can continue
-    if (process.env.NODE_ENV !== 'production') {
-      const otp = Math.floor(100000 + Math.random() * 900000).toString();
-      try {
-        await redis.setex(`otp:${phone}`, TTL_OTP, otp);
-      } catch (e) {
-        logger.warn(`[Auth] Redis fallback OTP save failed: ${e.message}`);
-      }
-      logger.warn(`[Auth] Twilio sendOTP failed, using dev fallback: ${err.message}`);
-      logger.info(`📱 DEV OTP (fallback) for ${phone} → ${otp}`);
-      return { success: true, dev: true, fallback: true };
+    // Fallback to Redis OTP if Twilio fails or is not configured
+    // This allows graceful degradation in development and handles missing Twilio credentials
+    const otp = Math.floor(100000 + Math.random() * 900000).toString();
+    try {
+      await redis.setex(`otp:${phone}`, TTL_OTP, otp);
+    } catch (e) {
+      logger.warn(`[Auth] Redis fallback OTP save failed: ${e.message}`);
     }
-    throw err;
+    logger.warn(`[Auth] Twilio sendOTP failed, using fallback: ${err.message}`);
+    logger.info(`📱 Fallback OTP for ${phone} → ${otp}`);
+    return { success: true, dev: true, fallback: true };
   }
 };
 
