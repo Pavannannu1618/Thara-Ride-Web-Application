@@ -27,9 +27,11 @@ app.use(helmet({ contentSecurityPolicy: true }));
 app.use(cors({
   origin: (origin, callback) => {
     const allowed = process.env.CLIENT_URLS?.split(',') || [];
+    console.log('CORS Check - Origin:', origin, 'Allowed:', allowed);
     if (!origin || allowed.includes(origin)) {
       callback(null, true);
     } else {
+      console.log('CORS Blocked - Origin not allowed');
       callback(new Error('Not allowed by CORS'));
     }
   },
