@@ -29,16 +29,19 @@ app.use(cors({
     const clientUrls = process.env.CLIENT_URLS || '';
     const allowed = clientUrls
       .split(',')
-      .map(url => url.trim())
+      .map(url => url.trim().replace(/\/$/, '')) // Remove trailing slash
       .filter(url => url.length > 0);
+    
+    const normalizedOrigin = origin?.replace(/\/$/, ''); // Normalize incoming origin
     
     console.log('📋 CORS Configuration:', { 
       clientUrls: process.env.CLIENT_URLS, 
       processedAllowed: allowed,
-      incomingOrigin: origin 
+      incomingOrigin: origin,
+      normalizedOrigin: normalizedOrigin
     });
     
-    if (!origin || allowed.includes(origin)) {
+    if (!origin || allowed.includes(normalizedOrigin)) {
       console.log('✅ CORS Allowed for origin:', origin);
       callback(null, true);
     } else {
