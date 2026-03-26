@@ -141,8 +141,8 @@ export const smartSearch = async (query, userLat, userLng, cityName) => {
   }
 };
 
-  return results.slice(0, 6);
-};
+return results.slice(0, 6);
+// };
 
 /** Format display_name → { main, secondary } */
 export const formatPlace = (display_name = '') => {
