@@ -1,10 +1,3 @@
-const fetch = require('node-fetch');  // npm i node-fetch@2
-const redis  = require('../config/redis');
-
-// Nominatim requires a descriptive User-Agent per their usage policy
-const UA = 'TharaRide/1.0 (contact@thararide.com)';
-
-const fetch = require('node-fetch');  // npm i node-fetch@2
 const redis  = require('../config/redis');
 
 // ── helpers ──────────────────────────────────────────────────────────────────
