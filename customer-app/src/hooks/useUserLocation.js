@@ -1,45 +1,50 @@
 import { useState, useEffect } from 'react';
-import { reverseGeocode, extractCity } from '../utils/geoUtils';
+import { reverseGeocode }      from '../utils/geoUtils';
 
-/**
- * Detects device GPS location once on mount.
- * Returns: { userLat, userLng, cityName, pickup }
- *
- * pickup = { address: 'Current location', coordinates: [lng, lat] }
- * cityName = e.g. 'Hyderabad' — used to bias search results
- */
 const useUserLocation = () => {
-  const [userLat,  setUserLat]  = useState(null);
-  const [userLng,  setUserLng]  = useState(null);
+  const [coords,   setCoords]   = useState(null);  // [lng, lat]
   const [cityName, setCityName] = useState('');
-  const [pickup,   setPickup]   = useState(null);
+  const [loading,  setLoading]  = useState(true);
+  const [error,    setError]    = useState(null);
 
   useEffect(() => {
-    if (!navigator.geolocation) return;
+    if (!navigator.geolocation) {
+      setError('Geolocation not supported');
+      setLoading(false);
+      return;
+    }
 
     navigator.geolocation.getCurrentPosition(
       async (pos) => {
-        const lat = pos.coords.latitude;
-        const lng = pos.coords.longitude;
+        const { latitude: lat, longitude: lng } = pos.coords;
+        setCoords([lng, lat]);
 
-        setUserLat(lat);
-        setUserLng(lng);
-        setPickup({
-          address:     'Current location',
-          coordinates: [lng, lat],
-        });
-
-        // Detect city for biased search
         try {
-          const data = await reverseGeocode(lat, lng);
-          if (data?.address) setCityName(extractCity(data.address));
-        } catch { /* silent */ }
+          const address = await reverseGeocode(lat, lng);
+          // Extract city — usually the second-to-last comma-separated segment
+          const parts = address.split(',');
+          const city  = parts.length >= 2
+            ? parts[parts.length - 3]?.trim() || parts[0]?.trim()
+            : parts[0]?.trim();
+          setCityName(city || 'your area');
+        } catch {
+          setCityName('your area');
+        }
+
+        setLoading(false);
       },
-      () => { /* Permission denied or unavailable — silently skip */ }
+      (err) => {
+        setError(err.message);
+        setLoading(false);
+        // Default to Hyderabad if permission denied
+        setCoords([78.4867, 17.3850]);
+        setCityName('Hyderabad');
+      },
+      { enableHighAccuracy: true, timeout: 8000, maximumAge: 60000 }
     );
   }, []);
 
-  return { userLat, userLng, cityName, pickup };
+  return { coords, cityName, loading, error };
 };
 
 export default useUserLocation;

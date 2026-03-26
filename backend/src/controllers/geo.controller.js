@@ -1,8 +1,6 @@
-const redis  = require('../config/redis');
+const redis = require('../config/redis');
 
-// ── helpers ──────────────────────────────────────────────────────────────────
-
-const googleMapsFetch = async (url) => {
+const googleFetch = async (url) => {
   const res = await fetch(url);
   if (!res.ok) {
     const err = new Error(`Google Maps API ${res.status}`);
@@ -12,77 +10,61 @@ const googleMapsFetch = async (url) => {
   return res.json();
 };
 
-// ── GET /api/v1/geo/search?q=...&lat=...&lng=...&city=...&bounded=0|1 ────────
+// ── GET /api/v1/geo/search?q=&lat=&lng=&bounded= ─────────────────────────────
 exports.search = async (req, res, next) => {
   try {
-    const { q, lat, lng, city, bounded = '0' } = req.query;
+    const { q, lat, lng, bounded = '0' } = req.query;
     if (!q) return res.status(400).json({ error: 'q is required' });
 
     const apiKey = process.env.GOOGLE_MAPS_API_KEY;
     if (!apiKey) return res.status(500).json({ error: 'Google Maps API key not configured' });
 
-    // Cache key — avoid hammering Google Maps API for identical queries
     const cacheKey = `geo:search:${q}:${lat}:${lng}:${bounded}`;
     try {
       const cached = await redis.get(cacheKey);
       if (cached) return res.json(JSON.parse(cached));
-    } catch { /* redis miss — continue */ }
+    } catch { /* miss */ }
 
-    // Build Google Places API URL
-    let url = `https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${encodeURIComponent(q)}&key=${apiKey}&components=country:in`;
+    let url = `https://maps.googleapis.com/maps/api/place/autocomplete/json`
+      + `?input=${encodeURIComponent(q)}`
+      + `&key=${apiKey}`
+      + `&components=country:in`
+      + `&language=en`;
 
-    // Add location bias for more accurate results
     if (lat && lng) {
-      // Use location bias with a radius (in meters)
-      const radius = bounded === '1' ? 50000 : 100000; // 50km for bounded, 100km for wider search
+      const radius = bounded === '1' ? 30000 : 100000;
       url += `&location=${lat},${lng}&radius=${radius}`;
-      // Note: strictbounds can be too restrictive, so we'll use location + radius for biasing
     }
 
-    const data = await googleMapsFetch(url);
+    const data = await googleFetch(url);
 
-    if (data.status === 'ZERO_RESULTS') {
-      return res.json([]);
-    }
+    if (data.status === 'ZERO_RESULTS') return res.json([]);
 
     if (data.status !== 'OK') {
-      console.error('Google Maps API Error:', {
-        status: data.status,
-        error_message: data.error_message,
-        url: url,
-        apiKey: apiKey ? 'SET' : 'NOT SET'
-      });
+      console.error('[Geo Search] Google error:', data.status, data.error_message);
       return res.json([]);
     }
 
-    // Transform Google Places response to match Nominatim format for frontend compatibility
-    const transformedResults = (data.predictions || []).map(prediction => ({
-      place_id: prediction.place_id,
-      display_name: prediction.description,
-      lat: null, // Will be fetched when needed
-      lon: null, // Will be fetched when needed
-      address: {
-        city: city || null,
-        state: null,
-        country: 'India'
-      },
-      type: 'place',
-      importance: 0.5
+    const results = (data.predictions || []).map(p => ({
+      place_id:     p.place_id,
+      display_name: p.description,
+      main_text:    p.structured_formatting?.main_text    || p.description,
+      secondary_text: p.structured_formatting?.secondary_text || '',
+      lat: null,
+      lon: null,
     }));
 
-    // Cache for 5 minutes — place names don't change frequently
-    try { await redis.setex(cacheKey, 300, JSON.stringify(transformedResults)); } catch { /* non-fatal */ }
+    try { await redis.setex(cacheKey, 300, JSON.stringify(results)); } catch { /* non-fatal */ }
 
-    res.json(transformedResults);
+    res.json(results);
   } catch (err) {
-    console.error('Geo search error:', err);
-    // If API error, return empty instead of crashing
+    console.error('[Geo Search] Error:', err.message);
     if (err.status >= 400) return res.json([]);
     next(err);
   }
 };
 
-// ── GET /api/v1/geo/reverse?lat=...&lng=... ──────────────────────────────────
+// ── GET /api/v1/geo/reverse?lat=&lng= ────────────────────────────────────────
 exports.reverse = async (req, res, next) => {
   try {
     const { lat, lng } = req.query;
@@ -97,55 +79,52 @@ exports.reverse = async (req, res, next) => {
       if (cached) return res.json(JSON.parse(cached));
     } catch { /* miss */ }
 
-    // Use Google Maps Geocoding API for reverse geocoding
-    const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${apiKey}&result_type=street_address|route|locality|administrative_area_level_1|country`;
+    const url = `https://maps.googleapis.com/maps/api/geocode/json`
+      + `?latlng=${lat},${lng}`
+      + `&key=${apiKey}`
+      + `&language=en`
+      + `&result_type=street_address|route|locality|administrative_area_level_2`;
 
-    const data = await googleMapsFetch(url);
+    const data = await googleFetch(url);
 
-    if (data.status === 'ZERO_RESULTS') {
-      return res.json(null);
-    }
+    if (data.status === 'ZERO_RESULTS') return res.json(null);
 
     if (data.status !== 'OK') {
-      console.error('Google Maps Geocode API Error:', data);
+      console.error('[Geo Reverse] Google error:', data.status);
       return res.json(null);
     }
 
-    // Transform Google Geocoding response to match Nominatim format
     const result = data.results[0];
     if (!result) return res.json(null);
 
-    // Extract address components
-    const addressComponents = {};
-    result.address_components.forEach(component => {
-      const types = component.types;
-      if (types.includes('locality')) addressComponents.city = component.long_name;
-      if (types.includes('administrative_area_level_1')) addressComponents.state = component.long_name;
-      if (types.includes('country')) addressComponents.country = component.long_name;
-      if (types.includes('postal_code')) addressComponents.postcode = component.long_name;
+    const comps = {};
+    result.address_components.forEach(c => {
+      if (c.types.includes('locality'))                       comps.city    = c.long_name;
+      if (c.types.includes('administrative_area_level_1'))    comps.state   = c.long_name;
+      if (c.types.includes('administrative_area_level_2'))    comps.district = c.long_name;
+      if (c.types.includes('country'))                        comps.country = c.long_name;
+      if (c.types.includes('postal_code'))                    comps.postcode = c.long_name;
     });
 
-    const transformedResult = {
-      place_id: result.place_id,
+    const out = {
+      place_id:     result.place_id,
       display_name: result.formatted_address,
-      lat: result.geometry.location.lat,
-      lon: result.geometry.location.lng,
-      address: addressComponents,
-      type: 'reverse_geocode'
+      lat:          result.geometry.location.lat,
+      lon:          result.geometry.location.lng,
+      address:      comps,
     };
 
-    // Cache reverse results for 10 minutes
-    try { await redis.setex(cacheKey, 600, JSON.stringify(transformedResult)); } catch { /* non-fatal */ }
+    try { await redis.setex(cacheKey, 600, JSON.stringify(out)); } catch { /* non-fatal */ }
 
-    res.json(transformedResult);
+    res.json(out);
   } catch (err) {
-    console.error('Geo reverse error:', err);
+    console.error('[Geo Reverse] Error:', err.message);
     if (err.status >= 400) return res.json(null);
     next(err);
   }
 };
 
-// ── GET /api/v1/geo/details?place_id=... ──────────────────────────────────
+// ── GET /api/v1/geo/details?place_id= ────────────────────────────────────────
 exports.details = async (req, res, next) => {
   try {
     const { place_id } = req.query;
@@ -160,43 +139,43 @@ exports.details = async (req, res, next) => {
       if (cached) return res.json(JSON.parse(cached));
     } catch { /* miss */ }
 
-    // Get place details from Google Places API
-    const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${place_id}&key=${apiKey}&fields=place_id,formatted_address,geometry,name,address_components`;
+    const url = `https://maps.googleapis.com/maps/api/place/details/json`
+      + `?place_id=${place_id}`
+      + `&key=${apiKey}`
+      + `&fields=place_id,formatted_address,geometry,name,address_components`
+      + `&language=en`;
 
-    const data = await googleMapsFetch(url);
+    const data = await googleFetch(url);
 
     if (data.status !== 'OK') {
-      return res.status(400).json({ error: `Google Maps API error: ${data.status}` });
+      console.error('[Geo Details] Google error:', data.status);
+      return res.status(400).json({ error: `Google Maps error: ${data.status}` });
     }
 
     const result = data.result;
+    const comps  = {};
 
-    // Extract address components
-    const addressComponents = {};
-    result.address_components.forEach(component => {
-      const types = component.types;
-      if (types.includes('locality')) addressComponents.city = component.long_name;
-      if (types.includes('administrative_area_level_1')) addressComponents.state = component.long_name;
-      if (types.includes('country')) addressComponents.country = component.long_name;
-      if (types.includes('postal_code')) addressComponents.postcode = component.long_name;
+    result.address_components.forEach(c => {
+      if (c.types.includes('locality'))                    comps.city    = c.long_name;
+      if (c.types.includes('administrative_area_level_1')) comps.state   = c.long_name;
+      if (c.types.includes('country'))                     comps.country = c.long_name;
+      if (c.types.includes('postal_code'))                 comps.postcode = c.long_name;
     });
 
-    const transformedResult = {
-      place_id: result.place_id,
+    const out = {
+      place_id:     result.place_id,
       display_name: result.formatted_address,
-      name: result.name,
-      lat: result.geometry.location.lat,
-      lon: result.geometry.location.lng,
-      address: addressComponents,
-      type: 'place_details'
+      name:         result.name,
+      lat:          result.geometry.location.lat,
+      lon:          result.geometry.location.lng,
+      address:      comps,
     };
 
-    // Cache place details for 30 minutes
-    try { await redis.setex(cacheKey, 1800, JSON.stringify(transformedResult)); } catch { /* non-fatal */ }
+    try { await redis.setex(cacheKey, 1800, JSON.stringify(out)); } catch { /* non-fatal */ }
 
-    res.json(transformedResult);
+    res.json(out);
   } catch (err) {
-    console.error('Geo details error:', err);
+    console.error('[Geo Details] Error:', err.message);
     if (err.status >= 400) return res.json(null);
     next(err);
   }

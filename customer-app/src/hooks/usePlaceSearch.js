@@ -1,65 +1,68 @@
 import { useState, useRef, useCallback } from 'react';
-import { smartSearch } from '../utils/geoUtils';
+import { smartSearch, getPlaceDetails } from '../utils/geoUtils';
 
-/**
- * Manages destination search state.
- * Debounces input at 380 ms, calls smartSearch with city bias + fuzzy matching.
- *
- * Usage:
- *   const { inputText, suggestions, sugLoading, focused,
- *           handleInputChange, handleClear, setFocused } = usePlaceSearch(userLat, userLng, cityName);
- */
-const usePlaceSearch = (userLat, userLng, cityName) => {
-  const [inputText,   setInputText]   = useState('');
-  const [suggestions, setSuggestions] = useState([]);
-  const [sugLoading,  setSugLoading]  = useState(false);
-  const [focused,     setFocused]     = useState(false);
-
+const usePlaceSearch = () => {
+  const [query,       setQuery]       = useState('');
+  const [results,     setResults]     = useState([]);
+  const [loading,     setLoading]     = useState(false);
+  const [selected,    setSelected]    = useState(null); // { address, coordinates, city }
   const debounceRef = useRef(null);
 
-  const handleInputChange = useCallback((val) => {
-    setInputText(val);
+  // Call this on every keystroke
+  const handleInput = useCallback((value, userCoords = null) => {
+    setQuery(value);
+    setSelected(null);
     clearTimeout(debounceRef.current);
 
-    if (!val.trim()) {
-      setSuggestions([]);
+    if (!value.trim()) {
+      setResults([]);
       return;
     }
 
+    setLoading(true);
     debounceRef.current = setTimeout(async () => {
-      setSugLoading(true);
-      try {
-        const results = await smartSearch(val, userLat, userLng, cityName);
-        setSuggestions(results);
-      } catch {
-        setSuggestions([]);
-      } finally {
-        setSugLoading(false);
-      }
-    }, 380);
-  }, [userLat, userLng, cityName]);
-
-  const handleClear = useCallback(() => {
-    clearTimeout(debounceRef.current);
-    setInputText('');
-    setSuggestions([]);
+      const found = await smartSearch(value, userCoords);
+      setResults(found);
+      setLoading(false);
+    }, 350);
   }, []);
 
-  const clearSuggestions = useCallback(() => setSuggestions([]), []);
+  // Call this when user picks a suggestion
+  const handleSelect = useCallback(async (place) => {
+    setQuery(place.display_name || place.main_text || '');
+    setResults([]);
+    setLoading(true);
 
-  const showDropdown = focused && (sugLoading || suggestions.length > 0 || inputText.length > 1);
+    const details = await getPlaceDetails(place.place_id);
+    if (details) {
+      setSelected(details);
+      setQuery(details.address);
+    } else {
+      // Fallback — no coordinates available yet
+      setSelected({ address: place.display_name, coordinates: null, city: '' });
+    }
+    setLoading(false);
+    return details;
+  }, []);
+
+  const clear = useCallback(() => {
+    setQuery('');
+    setResults([]);
+    setSelected(null);
+    setLoading(false);
+    clearTimeout(debounceRef.current);
+  }, []);
 
   return {
-    inputText,
-    setInputText,
-    suggestions,
-    sugLoading,
-    focused,
-    setFocused,
-    showDropdown,
-    handleInputChange,
-    handleClear,
-    clearSuggestions,
+    query,
+    results,
+    loading,
+    selected,
+    handleInput,
+    handleSelect,
+    clear,
+    setSelected,
+    setQuery,
   };
 };
 
