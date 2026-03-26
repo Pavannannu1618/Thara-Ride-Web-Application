@@ -35,13 +35,20 @@ exports.search = async (req, res, next) => {
     if (lat && lng) {
       // Use location bias with a radius (in meters)
       const radius = bounded === '1' ? 50000 : 100000; // 50km for bounded, 100km for wider search
-      url += `&location=${lat},${lng}&radius=${radius}&strictbounds=${bounded === '1' ? 'true' : 'false'}`;
+      url += `&location=${lat},${lng}&radius=${radius}`;
+      // Note: strictbounds can be too restrictive, so we'll use location + radius for biasing
     }
 
     const data = await googleMapsFetch(url);
 
     if (data.status !== 'OK' && data.status !== 'ZERO_RESULTS') {
-      return res.status(400).json({ error: `Google Maps API error: ${data.status}` });
+      console.error('Google Maps API Error:', {
+        status: data.status,
+        error_message: data.error_message,
+        url: url,
+        apiKey: apiKey ? 'SET' : 'NOT SET'
+      });
+      return res.status(400).json({ error: `Google Maps API error: ${data.status} - ${data.error_message || 'Unknown error'}` });
     }
 
     // Transform Google Places response to match Nominatim format for frontend compatibility
