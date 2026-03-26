@@ -121,6 +121,14 @@ exports.reverse = async (req, res, next) => {
     // Cache reverse results for 10 minutes
     try { await redis.setex(cacheKey, 600, JSON.stringify(transformedResult)); } catch { /* non-fatal */ }
 
+    res.json(transformedResult);
+  } catch (err) {
+    console.error('Geo reverse error:', err);
+    if (err.status >= 400) return res.json(null);
+    next(err);
+  }
+};
+
 // ── GET /api/v1/geo/details?place_id=... ──────────────────────────────────
 exports.details = async (req, res, next) => {
   try {
