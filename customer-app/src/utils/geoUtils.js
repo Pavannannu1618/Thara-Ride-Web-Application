@@ -2,10 +2,10 @@ import { haversine, roadDistance, calcFares, formatDuration } from './fareUtils'
 import api from '../services/api';   // your existing axios instance (has auth header)
 
 // ─────────────────────────────────────────────────────────────────────────────
-// All Nominatim calls go through your backend proxy — no CORS, no rate limits
+// Google Maps API calls through backend proxy — no CORS, proper rate limiting
 // ─────────────────────────────────────────────────────────────────────────────
 
-/** Reverse-geocode lat/lng → Nominatim JSON via backend */
+/** Reverse-geocode lat/lng → Google Maps JSON via backend */
 export const reverseGeocode = async (lat, lng) => {
   try {
     const res = await api.get('/geo/reverse', { params: { lat, lng } });
@@ -13,13 +13,17 @@ export const reverseGeocode = async (lat, lng) => {
   } catch { return null; }
 };
 
-/** Extract city from a Nominatim address object */
+/** Get place details by place_id → Google Maps JSON via backend */
+export const getPlaceDetails = async (placeId) => {
+  try {
+    const res = await api.get('/geo/details', { params: { place_id: placeId } });
+    return res.data || null;
+  } catch { return null; }
+};
+
+/** Extract city from a Google Maps address object */
 export const extractCity = (address = {}) =>
-  address.city            ||
-  address.town            ||
-  address.county          ||
-  address.state_district  ||
-  '';
+  address.city || address.locality || address.administrative_area_level_2 || '';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // FUZZY SEARCH
@@ -80,54 +84,62 @@ const dedup = (arr) => {
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
-// SMART SEARCH  — ONE call per search (not 3+ parallel)
-// Fuzzy variants are tried only if the primary call returns no results
+// SMART SEARCH using Google Maps Places API
+// Restricted to user's current city/area for accurate local results
 // ─────────────────────────────────────────────────────────────────────────────
 export const smartSearch = async (query, userLat, userLng, cityName) => {
   if (!query.trim()) return [];
 
-  const [primary, ...fallbacks] = typoVariants(query.trim());
+  try {
+    // Use Google Maps Places Autocomplete API through backend
+    const results = await backendSearch(query, userLat, userLng, cityName, true);
 
-  // 1. Try primary query (bounded = city-only)
-  let raw = await backendSearch(primary, userLat, userLng, cityName, true);
+    // Transform results to include coordinates by fetching place details for each
+    const enrichedResults = await Promise.all(
+      results.slice(0, 5).map(async (result) => {
+        try {
+          const details = await getPlaceDetails(result.place_id);
+          if (!details) return null;
 
-  // 2. If nothing found, try soft-bounded (wider area)
-  if (raw.length === 0) {
-    raw = await backendSearch(primary, userLat, userLng, cityName, false);
-  }
+          const itemLat = parseFloat(details.lat);
+          const itemLng = parseFloat(details.lon);
+          const dist = (userLat && userLng)
+            ? haversine(userLat, userLng, itemLat, itemLng)
+            : null;
 
-  // 3. If STILL nothing, try fuzzy variants one by one (stop at first hit)
-  if (raw.length === 0) {
-    for (const variant of fallbacks) {
-      raw = await backendSearch(variant, userLat, userLng, cityName, false);
-      if (raw.length > 0) break;
-    }
-  }
+          // Skip places > 50 km away for better local relevance
+          if (dist !== null && dist > 50) return null;
 
-  const results = [];
-  dedup(raw).forEach((item) => {
-    const itemLat = parseFloat(item.lat);
-    const itemLng = parseFloat(item.lon);
-    const dist    = (userLat && userLng)
-      ? haversine(userLat, userLng, itemLat, itemLng)
-      : null;
+          return {
+            ...result,
+            lat: itemLat,
+            lon: itemLng,
+            display_name: details.display_name || result.display_name,
+            address: details.address || result.address,
+            distanceKm: dist,
+            roadKm: dist !== null ? String(roadDistance(dist)) : null,
+            duration: dist !== null ? formatDuration(dist) : null,
+            fares: dist !== null ? calcFares(dist) : null,
+          };
+        } catch {
+          return null;
+        }
+      })
+    );
 
-    if (dist !== null && dist > 40) return;   // skip places > 40 km away
-
-    results.push({
-      ...item,
-      distanceKm: dist,
-      roadKm:     dist !== null ? String(roadDistance(dist)) : null,
-      duration:   dist !== null ? formatDuration(dist)       : null,
-      fares:      dist !== null ? calcFares(dist)            : null,
+    // Filter out null results and sort by distance
+    const validResults = enrichedResults.filter(result => result !== null);
+    validResults.sort((a, b) => {
+      if (a.distanceKm !== null && b.distanceKm !== null)
+        return a.distanceKm - b.distanceKm;
+      return 0;
     });
-  });
 
-  results.sort((a, b) => {
-    if (a.distanceKm !== null && b.distanceKm !== null)
-      return a.distanceKm - b.distanceKm;
-    return 0;
-  });
+    return validResults;
+  } catch {
+    return [];
+  }
+};
 
   return results.slice(0, 6);
 };
